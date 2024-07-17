@@ -141,9 +141,9 @@ function hitungLingkaran() {
   if(radius % 7 == 0){
     pi = 22/7;
   } else {
-    3.14;
+    pi = 3.14;
   };
-
+  console.log(pi);
   let keliling = 2 * pi * radius;
   let luas = pi * radius ** 2;
 
