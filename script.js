@@ -153,3 +153,39 @@ function hitungLingkaran() {
 }
 // ==============================================================================================================
 // Menghitung bangun ruang
+// kubus
+function hitungKubus() {
+  // Mengambil nilai input
+  let rusuk = Number(document.getElementById("rusuk").value);
+  let luasPermKubus = document.getElementById("luasPermKubus");
+  let volumeKubus = document.getElementById("volumeKubus");
+
+  // Menghitung
+  let luasPerm = 6 * rusuk **2;
+  let volume = rusuk ** 3;
+
+  // Mengembalikan hasil
+  luasPermKubus.innerHTML = "Luas permukaan adalah " + luasPerm + "cm<sup>2</sup>";
+  volumeKubus.innerHTML = "Keliling persegi adalah " + volume + "cm<sup>3</sup>";
+}
+
+// balok
+
+
+// limas segiempat
+
+
+// prisma segitiga
+
+
+// limas segitiga
+
+
+// tabung
+
+
+// kerucut
+
+
+// bola
+

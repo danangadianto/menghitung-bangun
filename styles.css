@@ -12,6 +12,18 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    border: 3px solid black;
+    margin-bottom: 10px;
+    padding-top: 25px;
+}
+
+.container .title{
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.container .title h1{
+    font-weight: bold;
 }
 
 .box{
@@ -22,10 +34,26 @@ body{
     align-items: center;
     margin: 10px;
     flex-wrap: wrap;
+    
 }
+
+.container .box .sub-judul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 input {
     margin: 5px 10px 0 0;
+}
+
+.container .box .input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .container .box .result {
