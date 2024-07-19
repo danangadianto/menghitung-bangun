@@ -90,7 +90,7 @@ function hitungKetupat() {
 }
 
 // Layang-layang
-function hitungKetupat() {
+function hitungLayang() {
   // Mengambil nilai input
   let miringKecil = Number(document.getElementById("miringKecil").value);
   let miringBesar = Number(document.getElementById("miringBesar").value);
@@ -101,7 +101,7 @@ function hitungKetupat() {
 
   // Menghitung
   let keliling = (2 * miringKecil) + (2 * miringBesar);
-  let luas = d1 * d1 * 0.5;
+  let luas = d1 * d2 * 0.5;
 
   // Mengembalikan hasil
   kelilingLayang.innerHTML = "Keliling Layang adalah " + keliling + "cm";
