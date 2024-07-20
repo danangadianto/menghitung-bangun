@@ -136,8 +136,8 @@
             </div>
             <div class="input">
                 <input id="radius" type="number" name="number" placeholder="Masukkan jari-jari">
+                <button onclick="hitungLingkaran()">Hitung</button>
             </div>
-            <button onclick="hitungLingkaran()">Hitung</button>
             <div class="result">
                 <p id="kelilingLingkaran"></p>
                 <p id="luasLingkaran"></p>
@@ -150,9 +150,13 @@
             <h1>BANGUN RUANG</h1>
         </div>
         <div class="box container">
-            <h3>Menghitung Volume Kubus</h3>
-            <img src="img/kubus.png" alt="" width="150px">
-            <input id="rusuk" type="number" name="number" placeholder="Masukkan rusuk">
+            <div class="sub-judul">
+                <h3>Menghitung Volume Kubus</h3>
+                <img src="img/kubus.png" alt="" width="150px">
+            </div>
+            <div class="input">
+                <input id="rusukKubus" type="number" name="number" placeholder="Masukkan rusuk">
+            </div>
             <button onclick="hitungKubus()">Hitung</button>
             <div class="result">
                 <p id="luasPermKubus"></p>
@@ -160,32 +164,74 @@
             </div>
         </div>
         <div class="box container">
-            <h3>Menghitung Volume Balok</h3>
-            <img src="img/balok.png" alt="" width="150px">
+            <div class="sub-judul">
+                <h3>Menghitung Volume Balok</h3>
+                <img src="img/balok.png" alt="" width="150px">
+            </div>
+            <div class="input">
+                <input type="number" id="panjangBalok" name="number" placeholder="Masukkan Panjang">
+                <input type="number" id="lebarBalok" name="number" placeholder="Masukkan Lebar">
+                <input type="number" id="tinggiBalok" name="number" placeholder="Masukkan Tinggi">
+            </div>
+            <button onclick="hitungBalok()">Hitung</button>
+            <div class="result">
+                <p id="luasPermBalok"></p>
+                <p id="volumeBalok"></p>
+            </div>
         </div>
         <div class="box container">
-            <h3>Menghitung Volume Limas Segiempat</h3>
-            <img src="img/limas-segiempat.png" alt="" width="150px">
+            <div class="sub-judul">
+                <h3>Menghitung Volume Limas Segiempat</h3>
+                <p style="color: red;">*Berlaku untuk alas persegi sama sisi. Jika persegi panjang, hitung sendiri atau tunggu programmernya bikin kodenya.</p>
+                <img src="img/limas-segiempat.png" alt="" width="150px">
+            </div>
+            <div class="input">
+                <input type="number" id="panjangLimas4" name="number" placeholder="Masukkan P">
+                <input type="number" id="tinggiLimas4" name="number" placeholder="Masukkan T">
+            </div>
+            <button onclick="hitungLimas4()">Hitung</button>
+            <div class="result">
+                <p id="luasPermLimas4"></p>
+                <p id="volumeLimas4"></p>
+            </div>
         </div>
         <div class="box container">
-            <h3>Menghitung Volume Prisma Segitiga</h3>
-            <img src="img/prisma-segitiga.png" alt="" width="150px">
+            <div class="sub-judul">
+                <h3>Menghitung Volume Prisma Segitiga</h3>
+                <img src="img/prisma-segitiga.png" alt="" width="150px">
+            </div>
         </div>
         <div class="box container">
-            <h3>Menghitung Volume Limas Segitiga</h3>
-            <img src="img/limas-segitiga.png" alt="" width="150px">
+            <div class="sub-judul">
+                <h3>Menghitung Volume Limas Segitiga</h3>
+                <img src="img/limas-segitiga.png" alt="" width="150px">
+            </div>
         </div>
         <div class="box container">
-            <h3>Menghitung Volume Tabung</h3>
-            <img src="img/tabung.png" alt="" width="100px">
+            <div class="sub-judul">
+                <h3>Menghitung Volume Tabung</h3>
+                <img src="img/tabung.png" alt="" width="100px">
+            </div>
         </div>
         <div class="box container">
-            <h3>Menghitung Volume Kerucut</h3>
-            <img src="img/kerucut.png" alt="" width="150px">
+            <div class="sub-judul">
+                <h3>Menghitung Volume Kerucut</h3>
+                <img src="img/kerucut.png" alt="" width="150px">
+            </div>
         </div>
         <div class="box container">
-            <h3>Menghitung Volume Bola</h3>
-            <img src="img/bola.png" alt="" width="150px">
+            <div class="sub-judul">
+                <h3>Menghitung Volume Bola</h3>
+                <img src="img/bola.png" alt="" width="150px">
+            </div>
+            <div class="input">
+                <input id="radiusBola" type="number" name="number" placeholder="Masukkan jari-jari">
+                <button onclick="hitungBola()">Hitung</button>
+            </div>
+            <div class="result">
+                <p id="LPBola"></p>
+                <p id="volBola"></p>
+            </div>
         </div>
     </div>
 

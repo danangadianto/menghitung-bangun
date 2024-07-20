@@ -143,7 +143,7 @@ function hitungLingkaran() {
   } else {
     pi = 3.14;
   };
-  console.log(pi);
+  
   let keliling = 2 * pi * radius;
   let luas = pi * radius ** 2;
 
@@ -156,7 +156,7 @@ function hitungLingkaran() {
 // kubus
 function hitungKubus() {
   // Mengambil nilai input
-  let rusuk = Number(document.getElementById("rusuk").value);
+  let rusuk = Number(document.getElementById("rusukKubus").value);
   let luasPermKubus = document.getElementById("luasPermKubus");
   let volumeKubus = document.getElementById("volumeKubus");
 
@@ -165,15 +165,50 @@ function hitungKubus() {
   let volume = rusuk ** 3;
 
   // Mengembalikan hasil
-  luasPermKubus.innerHTML = "Luas permukaan adalah " + luasPerm + "cm<sup>2</sup>";
-  volumeKubus.innerHTML = "Keliling persegi adalah " + volume + "cm<sup>3</sup>";
+  luasPermKubus.innerHTML = "Luas permukaan kubus adalah " + luasPerm + "cm<sup>2</sup>";
+  volumeKubus.innerHTML = "Volume kubus adalah " + volume + "cm<sup>3</sup>";
 }
 
 // balok
+function hitungBalok() {
+  // Mengambil nilai input
+  let p = Number(document.getElementById("panjangBalok").value);
+  let l = Number(document.getElementById("lebarBalok").value);
+  let t = Number(document.getElementById("tinggiBalok").value);
+  let luasPermBalok = document.getElementById("luasPermBalok");
+  let volumeBalok = document.getElementById("volumeBalok");
 
+  // Menghitung
+  let luasPerm = ((2 * p * l) + (2 * p * t) + (2 * l * t));
+  let volume = p * l * t;
+
+  // Mengembalikan hasil
+  luasPermBalok.innerHTML =
+    "Luas permukaan balok adalah " + luasPerm + "cm<sup>2</sup>";
+  volumeBalok.innerHTML =
+    "Volume balok adalah " + volume + "cm<sup>3</sup>";
+}
 
 // limas segiempat
+function hitungLimas4() {
+  // Mengambil nilai input
+  let p = Number(document.getElementById("panjangLimas4").value);
+  let t = Number(document.getElementById("tinggiLimas4").value);
+  let luasPermLimas4 = document.getElementById("luasPermLimas4");
+  let volumeLimas4 = document.getElementById("volumeLimas4");
 
+  // Menghitung
+  let luasAlas = p ** 2;
+  let pitagoras = Math.sqrt(((p / 2) ** 2) + (t ** 2));
+  let luasSegitiga = p * pitagoras * 0.5;
+  let luasPerm = luasAlas + (4 * luasSegitiga);
+  let volume = (luasAlas * t)/3;
+
+  // Mengembalikan hasil
+  luasPermLimas4.innerHTML =
+    "Luas permukaan Limas4 adalah " + luasPerm + "cm<sup>2</sup>";
+  volumeLimas4.innerHTML = "Volume Limas4 adalah " + volume + "cm<sup>3</sup>";
+}
 
 // prisma segitiga
 
@@ -188,4 +223,24 @@ function hitungKubus() {
 
 
 // bola
+function hitungBola() {
+  // Mengambil nilai input
+  let radius = Number(document.getElementById("radiusBola").value);
+  let lpBola = document.getElementById("LPBola");
+  let volBola = document.getElementById("volBola");
+  let pi = "";
 
+  // Menghitung
+  if (radius % 7 == 0) {
+    pi = 22 / 7;
+  } else {
+    pi = 3.14;
+  }
+  
+  let luasPermBola = Math.round(4 * pi * radius ** 2);
+  let volume = Math.round((4 * pi * radius ** 3) / 3);
+
+  // Mengembalikan hasil
+  lpBola.innerHTML = "Keliling Lingkaran adalah " + luasPermBola + "cm";
+  volBola.innerHTML = "Luas Lingkaran adalah " + volume + "cm<sup>2</sup>";
+}
