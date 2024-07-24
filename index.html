@@ -212,11 +212,31 @@
                 <h3>Menghitung Volume Tabung</h3>
                 <img src="img/tabung.png" alt="" width="100px">
             </div>
+            <div class="input">
+                <input id="radiusTabung" type="number" name="number" placeholder="Masukkan jari-jari">
+                <input id="tinggiTabung" type="number" name="number" placeholder="Masukkan tinggi">
+                <button onclick="hitungTabung()">Hitung</button>
+            </div>
+            <div class="result">
+                <p id="LPTabung"></p>
+                <p id="volTabung"></p>
+            </div>
         </div>
         <div class="box container">
             <div class="sub-judul">
                 <h3>Menghitung Volume Kerucut</h3>
+                <p style="color: red; text-align: center;">*Jika "s" atau "t" tidak tahu, <br> silakan cari sendiri atau isi dengan 0.</p>
                 <img src="img/kerucut.png" alt="" width="150px">
+            </div>
+            <div class="input">
+                <input id="radiusKerucut" type="number" name="number" placeholder="Masukkan jari-jari">
+                <input id="tinggiKerucut" type="number" name="number" placeholder="Masukkan tinggi">
+                <input id="miringKerucut" type="number" name="number" placeholder="Masukkan sisi miring">
+                <button onclick="hitungKerucut()">Hitung</button>
+            </div>
+            <div class="result">
+                <p id="LPKerucut"></p>
+                <p id="volKerucut"></p>
             </div>
         </div>
         <div class="box container">

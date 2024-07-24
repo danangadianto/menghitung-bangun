@@ -135,7 +135,7 @@ function hitungLingkaran() {
   let radius = Number(document.getElementById("radius").value);
   let kelilingLingkaran = document.getElementById("kelilingLingkaran");
   let luasLingkaran = document.getElementById("luasLingkaran");
-  let pi = ""
+  let pi = 0;
 
   // Menghitung
   if(radius % 7 == 0){
@@ -217,10 +217,63 @@ function hitungLimas4() {
 
 
 // tabung
+function hitungTabung() {
+  // Mengambil nilai input
+  let radius = Number(document.getElementById("radiusTabung").value);
+  let tinggi = Number(document.getElementById("tinggiTabung").value);
+  let lpTabung = document.getElementById("LPTabung");
+  let volTabung = document.getElementById("volTabung");
+  let pi = 0;
 
+  // Menghitung
+  if (radius % 7 == 0) {
+    pi = 22 / 7;
+  } else {
+    pi = 3.14;
+  }
+
+  let luasPermTabung = Math.round((2 * pi * radius * tinggi) + (2 * pi * radius ** 2));
+  let volume = Math.round(pi * (radius ** 2) * tinggi);
+
+  // Mengembalikan hasil
+  lpTabung.innerHTML =
+    "Luas permukaan Tabung adalah " + luasPermTabung + "cm<sup>2</sup>";
+  volTabung.innerHTML = "Volume Tabung adalah " + volume + "cm<sup>3</sup>";
+}
 
 // kerucut
+function hitungKerucut() {
+  // Mengambil nilai input
+  let radius = Number(document.getElementById("radiusKerucut").value);
+  let tinggi = Number(document.getElementById("tinggiKerucut").value);
+  let miring = Number(document.getElementById("miringKerucut").value);
+  let lpKerucut = document.getElementById("LPKerucut");
+  let volKerucut = document.getElementById("volKerucut");
+  let pi = 0;
 
+  // Menghitung
+  if (radius % 7 == 0) {
+    pi = 22 / 7;
+  } else {
+    pi = 3.14;
+  }
+
+  if (miring === 0){
+    miring = Math.sqrt((radius ** 2) + (tinggi ** 2));
+  }
+
+  if (tinggi === 0) {
+    tinggi = Math.sqrt((miring ** 2) - (radius ** 2));
+  }
+
+  let lpkerucut = Math.round((pi * radius * miring) + (pi * radius ** 2));
+  let volkerucut = Math.round((pi * (radius ** 2) * tinggi) / 3 );
+
+  // Mengembalikan hasil
+  lpKerucut.innerHTML =
+    "Luas permukaan kerucut adalah " + lpkerucut + "cm<sup>2</sup>";
+  volKerucut.innerHTML = "Volume kerucut adalah " + volkerucut + "cm<sup>3</sup>";
+}
 
 // bola
 function hitungBola() {
@@ -228,7 +281,7 @@ function hitungBola() {
   let radius = Number(document.getElementById("radiusBola").value);
   let lpBola = document.getElementById("LPBola");
   let volBola = document.getElementById("volBola");
-  let pi = "";
+  let pi = 0;
 
   // Menghitung
   if (radius % 7 == 0) {
@@ -241,6 +294,7 @@ function hitungBola() {
   let volume = Math.round((4 * pi * radius ** 3) / 3);
 
   // Mengembalikan hasil
-  lpBola.innerHTML = "Keliling Lingkaran adalah " + luasPermBola + "cm";
-  volBola.innerHTML = "Luas Lingkaran adalah " + volume + "cm<sup>2</sup>";
+  lpBola.innerHTML =
+    "Luas permukaan bola adalah " + luasPermBola + "cm<sup>2</sup>";
+  volBola.innerHTML = "Volume bola adalah " + volume + "cm<sup>3</sup>";
 }
