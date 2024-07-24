@@ -214,7 +214,42 @@ function hitungLimas4() {
 
 
 // limas segitiga
+function hitungLimas3() {
+  // Mengambil nilai input
+  let a = Number(document.getElementById("aLimas3").value);
+  let t = Number(document.getElementById("tLimas3").value);
+  let T = Number(document.getElementById("TLimas3").value);
+  let luasPermLimas3 = document.getElementById("LPLimas3");
+  let volumeLimas3 = document.getElementById("volLimas3");
 
+  // Menghitung
+  let T1 = Math.sqrt((T ** 2) - ((a/2) ** 2));
+  let a2 = Math.sqrt((a/2) ** 2) + (t ** 2);
+  console.log(a2);
+  let T2 = Math.sqrt((T ** 2) - ((a2/2) ** 2));
+  console.log(T2);
+  let luasAlas = (a * t) / 2;
+  let luasSisi1 = (a * T1) / 2;
+  let luasSisi2 = (a2 * T2) / 2;
+
+  console.log(luasAlas);
+  console.log(typeof luasAlas);
+  
+  console.log(luasSisi1);
+  console.log(typeof luasSisi1);
+  
+  console.log(luasSisi2);
+  console.log(typeof luasSisi2);
+  
+
+  let luasPerm = luasAlas + luasSisi1 + (2 * luasSisi2);
+  let volume = (a * t * T) / 6;
+
+  // Mengembalikan hasil
+  luasPermLimas3.innerHTML =
+    "Luas permukaan limas segitiga adalah " + luasPerm + "cm<sup>2</sup>";
+  volumeLimas3.innerHTML = "Volume limas segitiga adalah " + volume + "cm<sup>3</sup>";
+}
 
 // tabung
 function hitungTabung() {
